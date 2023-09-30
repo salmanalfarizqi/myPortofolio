@@ -49,6 +49,7 @@ function Home() {
             width={300}
             height={600}
             className='rounded-xl'
+            alt='avatar'
             />
           </div>
           <div className='w-[450px] px-10'>
@@ -68,13 +69,15 @@ function Home() {
         <h1 className='text-center text-white text-5xl mt-10 font-bold'>Skills & <span className='text-yellow-400'>Abilities</span></h1>
         <div className='flex flex-wrap bg-[Rgb(50,2,115)] rounded-md my-20 mx-32 p-11' >
           {data.map((item) => (
-            <div className='w-[142px] h-[118px] bg-[Rgba(0,0,22,0.9)] m-3 rounded-md hover:bg-neutral-950'>
+            <div key={item.name} className='w-[142px] h-[118px] bg-[Rgba(0,0,22,0.9)] m-3 rounded-md hover:bg-neutral-950'>
               <div className='flex justify-center'>
                 <Image 
                   src={item.image} 
                   width={80} 
                   height={80} 
-                  className='rounded-lg'/>
+                  className='rounded-lg'
+                  alt='item'
+                  />
               </div>
               <p className='text-center'>{item.name}</p>
             </div>
@@ -89,6 +92,7 @@ function Home() {
             width={190} 
             height={150}
             className='rounded-lg'
+            alt='school'
           />
           <div className='ml-5 my-4'>
             <p className='text-4xl font-bold text-[#012970]'>graduate of Software Engineer</p><br/>
@@ -101,7 +105,13 @@ function Home() {
         <h1 className='text-center text-white text-5xl mt-10 font-bold'>Project <span className='text-[#FFD900]'>Made</span></h1>
         <div className='flex justify-center mt-10'>
           <div className='rounded-lg'>
-            <Image src='/sekolah.jpg' width={250} height={250} className='rounded-t-xl'/>
+            <Image 
+              src='/sekolah.jpg' 
+              width={250} 
+              height={250} 
+              className='rounded-t-xl'
+              alt='project'
+              />
             <div className='bg-[#FFD900] rounded-b-lg'>
               <p className='text-black text-lg font-semibold ml-3'>Project Chat GPT</p>
             </div>
